@@ -21,6 +21,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - run: git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: git config --global user.email "build-gh-page-bot@bot.com"
       - run: git config --global user.name "build-gh-page-bot"
       - name: Use Node.js ${{ matrix.node-version }}

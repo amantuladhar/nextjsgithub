@@ -26,6 +26,10 @@ const Home: NextPage = () => {
           <Link href={"/profile"}>
             <a>Profile</a>
           </Link>
+          &nbsp;|&nbsp;
+          <Link href={"/test"}>
+            <a>Test</a>
+          </Link>
         </div>
 
         <p className={styles.description}>
